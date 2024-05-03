@@ -21,7 +21,7 @@ replace welfare_new = $bc if welfare<$bc
 
 gen pg = $ps / welfare_new														// estimate individual prosperity gap ratios from $25 prosperity threshold 
 
-bys year: sum pg [w = weight]													// country prosperity gap by year 
+bys year: sum pg [w = weight]		// weight is population weight											// country prosperity gap by year 
 
 /* Stata OUTPUT:
 
